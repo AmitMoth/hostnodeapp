@@ -1,16 +1,13 @@
 var express=require('express');
 
+var port=process.env.PORT || 7000;
 var app=express();
 
 
-app.get('/',()=>{
-    console.log('My first app on heroku!');
-});
-
-app.get('/api/test',function(req,res){
+app.get('/',function(req,res){
     res.send('Express is working!!');
   });
-app.listen(7000,()=>{
+app.listen(port,()=>{
     console.log('Running');
 })
 
